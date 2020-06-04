@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ./tests
+javac `find ./com/dexbox -name "*.java"`
+dx --dex --output=./tests.dex ./
+cd -
