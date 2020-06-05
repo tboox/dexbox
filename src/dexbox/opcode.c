@@ -36,7 +36,7 @@
  */
 
 // the dex opcode names
-static tb_char_t const* g_dex_opcode_names[] = 
+static tb_char_t const* g_opcode_names[] = 
 {
     // BEGIN(dexbox-opcode-names)
     "nop",
@@ -304,8 +304,8 @@ static tb_char_t const* g_dex_opcode_names[] =
 tb_char_t const* dx_opcode_name(tb_uint16_t opcode)
 {
     // check
-    tb_assert(opcode >= 0 && opcode < tb_arrayn(g_dex_opcode_names));
+    tb_assert(opcode >= 0 && opcode < tb_arrayn(g_opcode_names));
 
     // get name
-    return g_dex_opcode_names[opcode];
+    return g_opcode_names[opcode];
 }
