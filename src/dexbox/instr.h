@@ -56,23 +56,21 @@ typedef enum __dx_instr_format_e
 ,   DX_INSTR_FMT_22t            //!< op vA, vB, +CCCC
 ,   DX_INSTR_FMT_22s            //!< op vA, vB, #+CCCC
 ,   DX_INSTR_FMT_22c            //!< op vA, vB, thing@CCCC
-,   DX_INSTR_FMT_22cs           //!< [opt] op vA, vB, field offset CCCC
+,   DX_INSTR_FMT_22cs           //!< [opt] op vA, vB, field offset CCCC (TODO deprecated)
 ,   DX_INSTR_FMT_30t            //!< op +AAAAAAAA
 ,   DX_INSTR_FMT_32x            //!< op vAAAA, vBBBB
 ,   DX_INSTR_FMT_31i            //!< op vAA, #+BBBBBBBB
 ,   DX_INSTR_FMT_31t            //!< op vAA, +BBBBBBBB
 ,   DX_INSTR_FMT_31c            //!< op vAA, string@BBBBBBBB
 ,   DX_INSTR_FMT_35c            //!< op {vC,vD,vE,vF,vG}, thing@BBBB
-,   DX_INSTR_FMT_35ms           //!< [opt] invoke-virtual+super
+,   DX_INSTR_FMT_35ms           //!< [opt] invoke-virtual+super (TODO deprecated)
 ,   DX_INSTR_FMT_3rc            //!< op {vCCCC .. v(CCCC+AA-1)}, thing@BBBB
-,   DX_INSTR_FMT_3rms           //!< [opt] invoke-virtual+super/range
+,   DX_INSTR_FMT_3rms           //!< [opt] invoke-virtual+super/range (TODO deprecated)
 ,   DX_INSTR_FMT_51l            //!< op vAA, #+BBBBBBBBBBBBBBBB
-,   DX_INSTR_FMT_35mi           //!< [opt] inline invoke
-,   DX_INSTR_FMT_3rmi           //!< [opt] inline invoke/range
-
-    // TODO
-,   DX_INSTR_FMT_45cc           //!< new, unknown
-,   DX_INSTR_FMT_4rcc           //!< new, unknown
+,   DX_INSTR_FMT_35mi           //!< [opt] inline invoke (TODO deprecated)
+,   DX_INSTR_FMT_3rmi           //!< [opt] inline invoke/range (TODO deprecated)
+,   DX_INSTR_FMT_45cc           //!< op {vC, vD, vE, vF, vG}, meth@BBBB, proto@HHHH (A: count), format: AG op BBBB FEDC HHHH
+,   DX_INSTR_FMT_4rcc           //!< op {VCCCC .. v(CCCC+AA-1)}, meth@BBBB, proto@HHHH (AA: count), format: AA op BBBB CCCC HHHH
 
 }dx_instr_format_e;
 
@@ -80,21 +78,19 @@ typedef enum __dx_instr_format_e
 typedef enum __dx_instr_index_type_e 
 {
     DX_INSTR_INDEX_TYPE_UNKNOWN = 0
-,   DX_INSTR_INDEX_TYPE_NONE                //!< has no index
-,   DX_INSTR_INDEX_TYPE_VARIES              //!< "It depends." Used for throw-verification-error
-,   DX_INSTR_INDEX_TYPE_TYPE_REF            //!< type reference index
-,   DX_INSTR_INDEX_TYPE_STRING_REF          //!< string reference index
-,   DX_INSTR_INDEX_TYPE_METHOD_REF          //!< method reference index
-,   DX_INSTR_INDEX_TYPE_FIELD_REF           //!< field reference index
-,   DX_INSTR_INDEX_TYPE_INLINE_METHOD       //!< inline method index (for inline linked methods)
-,   DX_INSTR_INDEX_TYPE_VTABLE_OFFSET       //!< vtable offset (for static linked methods)
-,   DX_INSTR_INDEX_TYPE_FIELD_OFFSET        //!< field offset (for static linked fields)
-
-    // TODO
-,   DX_INSTR_INDEX_TYPE_METHOD_AND_PROTO_REF
-,   DX_INSTR_INDEX_TYPE_CALL_SITE_REF
-,   DX_INSTR_INDEX_TYPE_METHOD_HANDLE_REF
-,   DX_INSTR_INDEX_TYPE_PROTO_REF
+,   DX_INSTR_INDEX_TYPE_NONE                 //!< has no index
+,   DX_INSTR_INDEX_TYPE_VARIES               //!< "It depends." Used for throw-verification-error (TODO deprecated)
+,   DX_INSTR_INDEX_TYPE_TYPE_REF             //!< type reference index
+,   DX_INSTR_INDEX_TYPE_STRING_REF           //!< string reference index
+,   DX_INSTR_INDEX_TYPE_METHOD_REF           //!< method reference index
+,   DX_INSTR_INDEX_TYPE_FIELD_REF            //!< field reference index
+,   DX_INSTR_INDEX_TYPE_INLINE_METHOD        //!< inline method index (for inline linked methods) (TODO deprecated)
+,   DX_INSTR_INDEX_TYPE_VTABLE_OFFSET        //!< vtable offset (for static linked methods)
+,   DX_INSTR_INDEX_TYPE_FIELD_OFFSET         //!< field offset (for static linked fields)
+,   DX_INSTR_INDEX_TYPE_METHOD_AND_PROTO_REF //!< method and a proto reference index (for invoke-polymorphic)
+,   DX_INSTR_INDEX_TYPE_CALL_SITE_REF        //!< call site reference index
+,   DX_INSTR_INDEX_TYPE_METHOD_HANDLE_REF    //!< constant method handle reference index
+,   DX_INSTR_INDEX_TYPE_PROTO_REF            //!< prototype reference index
 
 }dx_instr_index_type_e;
 

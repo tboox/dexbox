@@ -115,9 +115,9 @@ tb_void_t dx_code_dump(dx_code_ref_t code, dx_file_ref_t file)
     tb_printf("        .catches %lu\n", dx_code_tries_size(code));
 
     // dump tries
-    tb_size_t           i = 0;
+    tb_size_t       i = 0;
     dx_try_ref_t    tries_data = dx_code_tries(code);
-    tb_size_t           tries_size = dx_code_tries_size(code);
+    tb_size_t       tries_size = dx_code_tries_size(code);
     for (i = 0; i < tries_size; i++)
     {
         // get the try
