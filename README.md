@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>dexbox</h1>
+  <h1>Dexbox</h1>
 
   <div>
     <a href="https://github.com/tboox/dexbox/actions?query=workflow%3Abuild">
@@ -35,7 +35,7 @@
 
 ## Introduction ([中文](/README_zh.md))
 
-dexbox is a lightweight dex file parsing library.
+Dexbox is a lightweight dex file parsing library.
 
 If you want to know more, please refer to:
 

@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dexbox</h1>
+  <h1>Dexbox</h1>
 
   <div>
     <a href="https://github.com/tboox/dexbox/actions?query=workflow%3Abuild">
@@ -36,7 +36,7 @@
 
 ## 简介
 
-dexbox是一个轻量的基于c语言的dex文件解析库。
+Dexbox是一个轻量的基于c语言的dex文件解析库。
 
 如果你想要了解更多，请参考：
 
