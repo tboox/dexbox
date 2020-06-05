@@ -313,6 +313,7 @@ op   e2 ushr-int/lit8               22b  y none          continue
 #
 # Optimized opcodes (not valid in an unoptimized dex file)
 #
+# TODO op e3-f2 has been changed, we need update them. @see https://cs.android.com/android/platform/superproject/+/master:art/libdexfile/dex/dex_instruction_list.h
 
 op   e3 +iget-volatile              22c  y field-ref     optimized|continue|throw
 op   e4 +iput-volatile              22c  n field-ref     optimized|continue|throw
