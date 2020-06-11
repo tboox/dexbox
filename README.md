@@ -37,13 +37,6 @@
 
 Dexbox is a lightweight dex file parsing library.
 
-If you want to know more, please refer to:
-
-* [Documents](https://xmake.io/#/home)
-* [HomePage](https://xmake.io)
-* [Github](https://github.com/tboox/dexbox)
-* [Gitee](https://gitee.com/tboox/dexbox)
-
 ## Prerequisites
 
 XMake installed on the system. Available [here](https://github.com/xmake-io/xmake).

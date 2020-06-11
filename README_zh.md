@@ -38,13 +38,6 @@
 
 Dexbox是一个轻量的基于c语言的dex文件解析库。
 
-如果你想要了解更多，请参考：
-
-* [在线文档](https://xmake.io/#/zh-cn/getting_started)
-* [项目主页](https://xmake.io/#/zh-cn/)
-* [Github](https://github.com/tboox/dexbox)
-* [Gitee](https://gitee.com/tboox/dexbox)
-
 ## 准备工作
 
 我们需要先安装[xmake](https://github.com/xmake-io/xmake)来编译此项目。
